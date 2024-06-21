@@ -1,0 +1,9 @@
+[Unit]
+Description=Pulse Secure Network Namespace
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/lib/pulsesecure-netns.sh start
+ExecStop=/usr/local/lib/pulsesecure-netns.sh stop
+RemainAfterExit=yes
